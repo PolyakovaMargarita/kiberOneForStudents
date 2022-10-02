@@ -11,7 +11,7 @@ namespace ConsoleApplication1
         {
             int x = 10;
             
-            Console.WriteLine("x = " + x);
+            Console.WriteLine("x  = " + x);   
 
             Console.Read();
         }

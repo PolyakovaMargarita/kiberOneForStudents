@@ -9,10 +9,15 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            int x = 10;
-
-            Console.WriteLine("X = " + x);
-
+            double x = 11;
+            string str = "string x = ";
+            Console.WriteLine(str + x);
+            
+            x = x / 3 + 10;
+            str = "variable " + str;
+            Console.WriteLine(str + x)
+            Console.WriteLine(str[0]);
+            Console.WriteLine(str.Length);
 
             Console.Read();
         }

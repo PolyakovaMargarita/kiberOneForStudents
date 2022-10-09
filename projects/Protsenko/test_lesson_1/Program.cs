@@ -9,17 +9,23 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            double x = 11;
-            string str = "string x = ";
-            Console.WriteLine(str + x);
-            
-            x = x / 3 + 10;
-            str = "variable " + str;
-            Console.WriteLine(str + x);
-            Console.WriteLine(str[0]);
-            Console.WriteLine(str.Length);
+        int diskr;
+            Console.WriteLine("Enter a number and press Enter ");
 
-            Console.Read();
+            string str = Console.ReadLine();
+
+            diskr = Convert.ToInt32(str);
+
+            if (diskr < 0)  { 
+                Console.WriteLine("нет решения");
+            }
+             if (diskr == 0)  { 
+                Console.WriteLine("Есть одно решение");
+             }
+              if (diskr > 0)  { 
+                Console.WriteLine("есть два решения");
+             }  
+              Console.ReadKey();
+           }
         }
     }
-}

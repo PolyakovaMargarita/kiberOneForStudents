@@ -9,11 +9,25 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            int x = 10;
+            int diskr;
 
-            Console.WriteLine("x = " + x);
+            Console.WriteLine("Enter a number and press Enter: ");
 
-            Console.Read();
+            string str = Console.ReadLine();
+
+            diskr = Convert.ToInt32(str);
+
+            if (diskr < 0) {
+                Console.WriteLine("нет решения");
+            }
+            if (diskr == 0) {
+                Console.WriteLine("одно решение");
+            }
+            if (diskr > 0) {
+                Console.WriteLine("два решения");
+            }
+
+            Console.ReadKey();
         }
     }
 }

@@ -9,11 +9,36 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            int x = 10;
+            // Целое число дискриминант
+            int diskr;
 
-            Console.WriteLine("X = " + x);
+            //Приглашение пользователя ввести число
+            Console.WriteLine("Enter a number and press Enter: ");
 
-            Console.Read();
+            //Получение первой строки
+            string str = Console.ReadLine();
+
+            //Преобразование первой строки в число
+            diskr = Convert.ToInt32(str);
+
+            //Дискриминант меньше нуля
+            if (diskr < 0)
+            {
+                //Выведем сообщение
+                Console.WriteLine("Нет решения");
+            }
+            if (diskr == 0)
+            {   
+                //Выведем сообщение
+                Console.WriteLine("Есть одно решение");
+            }
+            if (diskr > 0)
+            {
+                //Выведем сообщение
+                Console.WriteLine("Есть два решение");
+            }
+
+            Console.ReadKey();
         }
     }
 }

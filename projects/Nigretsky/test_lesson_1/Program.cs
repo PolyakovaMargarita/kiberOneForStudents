@@ -9,8 +9,24 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello!");
-            Console.Read();
+            int discr;
+            Console.WriteLine("Entew a numbew and pwess Entew ")
+            string str = Console.ReadLine();
+            discr = Convert.ToInt32(str);
+            if (discr < 0)
+            {
+            Console.WriteLine("Nyow!")
+            }
+            else if (discr == 0) 
+            {
+            Console.WriteLine("Wan numbew!")
+            }
+            else if (discr > 0)
+            {
+            Console.WriteLine("Manyeow")
+            }
+            Console.ReadKey();
+
         }
     }
 }

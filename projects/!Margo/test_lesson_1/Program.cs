@@ -9,30 +9,31 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            // Целое число дискриминант
-            int diskr;
+            string poisk = "a";
 
-            //Приглашение пользователя ввести число
-            Console.WriteLine("Enter a number and press Enter: ");
-            
-            //Получение первой строки
+            Console.WriteLine("Enter a string");
+
             string str = Console.ReadLine();
+            int dlina = str.Length;
 
-            //Преобразование первой строки в число
-            diskr = Convert.ToInt32(str);
+            /* машина */
+            /* 012345 */
 
-            //Дискриминант меньше нудя
-            if (diskr < 0) {
-                //Выведем сообщение
-                Console.WriteLine("Нет решения");
-            }
-            if (diskr == 0) {
-                //Выведем сообщение
-                Console.WriteLine("Есть одно решение");
-            }
-            if (diskr > 0) {
-                //Выведем сообщение
-                Console.WriteLine("Есть два решения");
+            string found = "not found";
+            bool have = false;
+
+            for (int i = 0; i < dlina; i++)
+			{
+                if (str[i].ToString() == poisk)
+                { 
+                    have = true;
+                    Console.WriteLine(poisk + " on = " + i + " position" );
+                }
+			}
+
+            if (!have)
+            {
+                Console.WriteLine(found);
             }
 
             Console.ReadKey();

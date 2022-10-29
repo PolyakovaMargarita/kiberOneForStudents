@@ -9,17 +9,34 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            double x = 11;
-            string str = "string x = ";
-            Console.WriteLine(str + x);
-            
-            x = x / 3 + 10;
-            str = "variable " + str;
-            Console.WriteLine(str + x)
-            Console.WriteLine(str[0]);
-            Console.WriteLine(str.Length);
+            string poisk = "a";
 
-            Console.Read();
+            Console.WriteLine("Enter a string");
+
+            string str = Console.ReadLine();
+            int dlina = str.Length;
+
+            /* машина */
+            /* 012345 */
+
+            string found = "not found";
+            bool have = false;
+
+            for (int i = 0; i < dlina; i++)
+			{
+                if (str[i].ToString() == poisk)
+                { 
+                    have = true;
+                    Console.WriteLine(poisk + " on = " + i + " position" );
+                }
+			}
+
+            if (!have)
+            {
+                Console.WriteLine(found);
+            }
+
+            Console.ReadKey();
         }
     }
 }

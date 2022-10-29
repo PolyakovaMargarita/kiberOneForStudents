@@ -9,25 +9,22 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            int diskr;
+           string poisk = "a";
 
-            Console.WriteLine("Enter a number and press Enter: ");
+            Console.WriteLine("Enter a string");
 
             string str = Console.ReadLine();
+            int dlina = str.Length;
 
-            diskr = Convert.ToInt32(str);
-
-            if (diskr < 0) {
-                Console.WriteLine("нет решения");
+            for (int i = 0; i < dlina; i++)
+            {
+                if (str[i].ToString() == poisk)
+                {
+                    Console.WriteLine(poisk + "on = " + i + " position" );
+             
+                }
             }
-            if (diskr == 0) {
-                Console.WriteLine("одно решение");
-            }
-            if (diskr > 0) {
-                Console.WriteLine("два решения");
-            }
-
-            Console.ReadKey();
+             Console.ReadKey();
         }
     }
 }

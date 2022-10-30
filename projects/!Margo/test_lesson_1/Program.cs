@@ -5,38 +5,24 @@ using System.Text;
 
 namespace ConsoleApplication1
 {
-    class Program
+    class Programeee
     {
+        public int Add (int x, int y)
+        {
+            return x + y;
+        }
+
         static void Main(string[] args)
         {
-            string poisk = "a";
+            Program p = new Program();
 
-            Console.WriteLine("Enter a string");
+            int r1 = p.Add(54, 78);
+            Console.WriteLine("54 + 78 = " + r1);
 
-            string str = Console.ReadLine();
-            int dlina = str.Length;
+            int r2 = p.Add(5, 8);
+            Console.WriteLine("5 + 8 = " + r2);
 
-            /* машина */
-            /* 012345 */
-
-            string found = "not found";
-            bool have = false;
-
-            for (int i = 0; i < dlina; i++)
-			{
-                if (str[i].ToString() == poisk)
-                { 
-                    have = true;
-                    Console.WriteLine(poisk + " on = " + i + " position" );
-                }
-			}
-
-            if (!have)
-            {
-                Console.WriteLine(found);
-            }
-
-            Console.ReadKey();
+            Console.ReadLine();
         }
     }
 }

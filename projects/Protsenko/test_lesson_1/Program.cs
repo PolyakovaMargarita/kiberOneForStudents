@@ -1,31 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace ConsoleApplication1
 {
+    class Human
+    {
+        public string name;
+        public int age;
+        public int height;
+    }
+    class Child : Human
+    {
+        new public int name = 5;
+        new public int age = 100;
+
+        public void SetAge(int x)
+        {
+            if((x > 0) & (x < 16))
+            {
+                age = x;
+            }
+        }
+
+        public void Print()
+        {
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Age: " + age);
+            Console.WriteLine("Height: " + height);
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-        int diskr;
-            Console.WriteLine("Enter a number and press Enter ");
+            Child Ivan = new Child();
+            Ivan.Print();
 
-            string str = Console.ReadLine();
+            Ivan.SetAge(3);
+            Ivan.Print();
 
-            diskr = Convert.ToInt32(str);
-
-            if (diskr < 0)  { 
-                Console.WriteLine("нет решения");
+          Console.ReadLine();
             }
-             if (diskr == 0)  { 
-                Console.WriteLine("Есть одно решение");
-             }
-              if (diskr > 0)  { 
-                Console.WriteLine("есть два решения");
-             }  
-              Console.ReadKey();
-           }
         }
     }
